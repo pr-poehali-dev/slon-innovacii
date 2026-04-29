@@ -6,6 +6,7 @@ import Geography from "@/components/Geography";
 import Delivery from "@/components/Delivery";
 import Exhibitions from "@/components/Exhibitions";
 import Catalog from "@/components/Catalog";
+import Clients from "@/components/Clients";
 import Promo from "@/components/Promo";
 import Footer from "@/components/Footer";
 
@@ -20,6 +21,7 @@ const Index = () => {
       <Delivery />
       <Exhibitions />
       <Catalog />
+      <Clients />
       <Promo />
       <Footer />
     </main>
