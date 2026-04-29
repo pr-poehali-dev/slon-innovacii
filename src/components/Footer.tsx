@@ -1,5 +1,3 @@
-import LogoImage from "@/components/ui/LogoImage";
-
 export default function Footer() {
   return (
     <div
@@ -55,8 +53,8 @@ export default function Footer() {
             </div>
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 sm:gap-0">
               <div className="flex items-end gap-6 mt-4 sm:mt-6 lg:mt-10">
-                <LogoImage
-                  src="https://cdn.poehali.dev/projects/7dae44f0-6f80-4467-8e57-681afb14cfd8/bucket/64ec4992-014a-4643-9796-69df6bf5ebab.png"
+                <img
+                  src="https://cdn.poehali.dev/projects/7dae44f0-6f80-4467-8e57-681afb14cfd8/bucket/logos/pioneer-trade-transparent.png"
                   alt="Пионер Трейд логотип"
                   className="h-14 sm:h-16 w-auto object-contain mb-2"
                 />
