@@ -1,5 +1,6 @@
 import { useScroll, useTransform, motion, useMotionValue, useSpring } from "framer-motion";
 import { useRef, useEffect } from "react";
+import PioneerLogo from "@/components/ui/PioneerLogo";
 
 
 export default function Hero() {
@@ -108,22 +109,7 @@ export default function Hero() {
               }}
             />
 
-            <img
-              src="https://cdn.poehali.dev/projects/7dae44f0-6f80-4467-8e57-681afb14cfd8/bucket/logos/pioneer-trade-transparent.png"
-              alt="ГК Пионер Трейд"
-              className="h-36 md:h-56 lg:h-72 w-auto object-contain relative z-[1]"
-              style={{
-                filter: [
-                  "contrast(1.25)",
-                  "brightness(1.35)",
-                  "saturate(1.6)",
-                  "drop-shadow(0 0 18px rgba(249,115,22,0.55))",
-                  "drop-shadow(0 0 6px rgba(255,255,255,0.3))",
-                  "drop-shadow(0 24px 48px rgba(0,0,0,0.7))",
-                ].join(" "),
-                imageRendering: "crisp-edges",
-              }}
-            />
+            <PioneerLogo height={180} className="relative z-[1] drop-shadow-2xl" />
           </motion.div>
         </motion.div>
 
