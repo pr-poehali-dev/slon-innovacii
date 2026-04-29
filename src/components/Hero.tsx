@@ -106,7 +106,15 @@ export default function Hero() {
               alt="ГК Пионер Трейд"
               className="h-36 md:h-56 lg:h-72 w-auto object-contain relative z-[1]"
               style={{
-                filter: "drop-shadow(0 20px 40px rgba(0,0,0,0.6)) drop-shadow(0 0 80px rgba(249,115,22,0.2))",
+                filter: [
+                  "contrast(1.25)",
+                  "brightness(1.35)",
+                  "saturate(1.6)",
+                  "drop-shadow(0 0 18px rgba(249,115,22,0.55))",
+                  "drop-shadow(0 0 6px rgba(255,255,255,0.3))",
+                  "drop-shadow(0 24px 48px rgba(0,0,0,0.7))",
+                ].join(" "),
+                imageRendering: "crisp-edges",
               }}
             />
           </motion.div>
