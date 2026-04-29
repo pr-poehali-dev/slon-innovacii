@@ -61,9 +61,9 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <img
-            src="https://cdn.poehali.dev/projects/7dae44f0-6f80-4467-8e57-681afb14cfd8/files/916c9155-3537-452a-a497-c09c704f2cd2.jpg"
+            src="https://cdn.poehali.dev/projects/7dae44f0-6f80-4467-8e57-681afb14cfd8/bucket/64ec4992-014a-4643-9796-69df6bf5ebab.png"
             alt="ГК Пионер Трейд"
-            className="w-20 h-20 md:w-28 md:h-28 object-cover rounded-sm opacity-95"
+            className="h-20 md:h-28 w-auto object-contain drop-shadow-2xl"
           />
         </motion.div>
 
