@@ -4,6 +4,7 @@ import Featured from "@/components/Featured";
 import Logistics from "@/components/Logistics";
 import Geography from "@/components/Geography";
 import Delivery from "@/components/Delivery";
+import Exhibitions from "@/components/Exhibitions";
 import Promo from "@/components/Promo";
 import Footer from "@/components/Footer";
 
@@ -16,6 +17,7 @@ const Index = () => {
       <Logistics />
       <Geography />
       <Delivery />
+      <Exhibitions />
       <Promo />
       <Footer />
     </main>
