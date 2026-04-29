@@ -1,6 +1,12 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
+interface Manager {
+  name: string;
+  phone: string;
+  email: string;
+}
+
 const categories = [
   {
     id: "petrochemistry",
@@ -10,6 +16,7 @@ const categories = [
     text: "text-amber-400",
     border: "border-amber-500",
     gradient: "from-amber-500/20 to-amber-900/40",
+    manager: { name: "Алексей Соколов", phone: "+7 (495) 123-45-01", email: "sokolov@pioneer-trade.ru" },
     products: [
       "Этилен (C₂H₄)", "Пропилен (C₃H₆)", "Бензол (C₆H₆)", "Толуол (C₇H₈)",
       "Ксилол (орто, мета, пара)", "Стирол", "Нафталин", "Антрацен",
@@ -24,6 +31,7 @@ const categories = [
     text: "text-blue-400",
     border: "border-blue-500",
     gradient: "from-blue-500/20 to-blue-900/40",
+    manager: { name: "Марина Волкова", phone: "+7 (495) 123-45-02", email: "volkova@pioneer-trade.ru" },
     products: [
       "Полиэтилен высокого давления (ПЭВД)", "Полиэтилен низкого давления (ПЭНД)",
       "Полипропилен (ПП)", "Поливинилхлорид (ПВХ)", "Полистирол (ПС)",
@@ -40,6 +48,7 @@ const categories = [
     text: "text-cyan-400",
     border: "border-cyan-500",
     gradient: "from-cyan-500/20 to-cyan-900/40",
+    manager: { name: "Дмитрий Орлов", phone: "+7 (495) 123-45-03", email: "orlov@pioneer-trade.ru" },
     products: [
       "Ацетон", "Этанол технический", "Изопропиловый спирт (ИПС)",
       "Метанол", "Этилацетат", "Бутилацетат", "Н-бутанол", "Изобутанол",
@@ -56,6 +65,7 @@ const categories = [
     text: "text-red-400",
     border: "border-red-500",
     gradient: "from-red-500/20 to-red-900/40",
+    manager: { name: "Екатерина Зайцева", phone: "+7 (495) 123-45-04", email: "zaitseva@pioneer-trade.ru" },
     products: [
       "Серная кислота (H₂SO₄)", "Соляная кислота (HCl)", "Азотная кислота (HNO₃)",
       "Фосфорная кислота (H₃PO₄)", "Уксусная кислота ледяная",
@@ -72,6 +82,7 @@ const categories = [
     text: "text-violet-400",
     border: "border-violet-500",
     gradient: "from-violet-500/20 to-violet-900/40",
+    manager: { name: "Павел Морозов", phone: "+7 (495) 123-45-05", email: "morozov@pioneer-trade.ru" },
     products: [
       "Гидроксид натрия (NaOH, каустик)", "Гидроксид калия (KOH)",
       "Гидроксид кальция (Ca(OH)₂)", "Аммиак технический (NH₃)",
@@ -88,6 +99,7 @@ const categories = [
     text: "text-emerald-400",
     border: "border-emerald-500",
     gradient: "from-emerald-500/20 to-emerald-900/40",
+    manager: { name: "Ольга Петрова", phone: "+7 (495) 123-45-06", email: "petrova@pioneer-trade.ru" },
     products: [
       "Мочевина (карбамид)", "Аммиачная селитра", "Сульфат аммония",
       "Хлорид калия", "Сульфат калия", "Калийная селитра",
@@ -104,6 +116,7 @@ const categories = [
     text: "text-pink-400",
     border: "border-pink-500",
     gradient: "from-pink-500/20 to-pink-900/40",
+    manager: { name: "Наталья Сидорова", phone: "+7 (495) 123-45-07", email: "sidorova@pioneer-trade.ru" },
     products: [
       "Диоксид титана (TiO₂)", "Оксид железа красный (Fe₂O₃)",
       "Оксид железа жёлтый", "Оксид железа чёрный (Fe₃O₄)",
@@ -121,6 +134,7 @@ const categories = [
     text: "text-sky-400",
     border: "border-sky-500",
     gradient: "from-sky-500/20 to-sky-900/40",
+    manager: { name: "Игорь Лебедев", phone: "+7 (495) 123-45-08", email: "lebedev@pioneer-trade.ru" },
     products: [
       "Лаурилсульфат натрия (SLS)", "Лаурилэфирсульфат натрия (SLES)",
       "Алкилбензолсульфонат (АБС)", "Нефтяной сульфонат",
@@ -138,6 +152,7 @@ const categories = [
     text: "text-orange-400",
     border: "border-orange-500",
     gradient: "from-orange-500/20 to-orange-900/40",
+    manager: { name: "Сергей Николаев", phone: "+7 (495) 123-45-09", email: "nikolaev@pioneer-trade.ru" },
     products: [
       "Хлорид натрия (соль техническая)", "Сульфат натрия (Na₂SO₄)",
       "Нитрат натрия", "Нитрат кальция", "Хлорид кальция (CaCl₂)",
@@ -155,6 +170,7 @@ const categories = [
     text: "text-yellow-400",
     border: "border-yellow-500",
     gradient: "from-yellow-500/20 to-yellow-900/40",
+    manager: { name: "Андрей Козлов", phone: "+7 (495) 123-45-10", email: "kozlov@pioneer-trade.ru" },
     products: [
       "Активированный уголь", "Силикагель", "Цеолиты",
       "Оксид алюминия (γ-Al₂O₃)", "Диоксид кремния (аэросил)",
@@ -172,6 +188,7 @@ const categories = [
     text: "text-rose-400",
     border: "border-rose-500",
     gradient: "from-rose-500/20 to-rose-900/40",
+    manager: { name: "Виктория Смирнова", phone: "+7 (495) 123-45-11", email: "smirnova@pioneer-trade.ru" },
     products: [
       "Антиоксиданты для полимеров", "Стабилизаторы ПВХ",
       "Пластификаторы (ДОФ, ДОА, ДБФ)", "Антипирены",
@@ -189,6 +206,7 @@ const categories = [
     text: "text-neutral-400",
     border: "border-neutral-500",
     gradient: "from-neutral-500/20 to-neutral-900/40",
+    manager: { name: "Роман Фёдоров", phone: "+7 (495) 123-45-12", email: "fedorov@pioneer-trade.ru" },
     products: [
       "Сера техническая", "Каолин (белая сажа)",
       "Диоксид кремния (наполнитель)", "Нафтенат цинка",
@@ -320,7 +338,7 @@ export default function Catalog() {
                 >
                   {/* Шапка */}
                   <div className={`relative overflow-hidden p-6 mb-4 bg-gradient-to-r ${current.gradient} border ${current.border}`}>
-                    <div className="flex items-center justify-between gap-4">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                       <div className="flex items-center gap-4">
                         <span className="text-5xl">{current.icon}</span>
                         <div>
@@ -331,6 +349,31 @@ export default function Catalog() {
                       <button className={`shrink-0 border ${current.border} ${current.text} text-xs uppercase tracking-widest px-5 py-2.5 hover:bg-white/10 transition-colors hidden sm:block`}>
                         Запросить прайс
                       </button>
+                    </div>
+
+                    {/* Менеджер */}
+                    <div className={`mt-4 pt-4 border-t ${current.border} border-opacity-40 flex flex-col sm:flex-row sm:items-center gap-3`}>
+                      <div className={`w-9 h-9 rounded-full ${current.bg} bg-opacity-20 border ${current.border} flex items-center justify-center shrink-0`}>
+                        <span className="text-base">👤</span>
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <p className="text-white text-sm font-semibold">{current.manager.name}</p>
+                        <p className="text-neutral-500 text-xs">Ответственный менеджер</p>
+                      </div>
+                      <div className="flex flex-wrap gap-2">
+                        <a
+                          href={`tel:${current.manager.phone.replace(/\D/g, "")}`}
+                          className={`flex items-center gap-1.5 text-xs ${current.text} border ${current.border} border-opacity-50 px-3 py-1.5 hover:bg-white/10 transition-colors`}
+                        >
+                          📞 {current.manager.phone}
+                        </a>
+                        <a
+                          href={`mailto:${current.manager.email}`}
+                          className={`flex items-center gap-1.5 text-xs ${current.text} border ${current.border} border-opacity-50 px-3 py-1.5 hover:bg-white/10 transition-colors`}
+                        >
+                          ✉️ {current.manager.email}
+                        </a>
+                      </div>
                     </div>
                   </div>
 
