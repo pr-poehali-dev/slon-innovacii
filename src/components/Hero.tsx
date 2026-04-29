@@ -54,22 +54,8 @@ export default function Hero() {
         style={{ y: titleY, scale: titleScale, opacity: titleOpacity }}
         className="relative z-10 text-center text-white px-6"
       >
-        {/* Логотип */}
-        <motion.div
-          className="flex justify-center mb-6"
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
-          <img
-            src="https://cdn.poehali.dev/projects/7dae44f0-6f80-4467-8e57-681afb14cfd8/bucket/logos/pioneer-trade-transparent.png"
-            alt="ГК Пионер Трейд"
-            className="h-20 md:h-28 w-auto object-contain drop-shadow-2xl"
-          />
-        </motion.div>
-
         <motion.p
-          className="uppercase tracking-[0.3em] text-sm md:text-base mb-6 opacity-70"
+          className="uppercase tracking-[0.3em] text-sm md:text-base mb-8 opacity-70"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 0.7, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -77,52 +63,62 @@ export default function Hero() {
           Группа компаний · основана в 2007 году
         </motion.p>
 
-        {/* Объёмный заголовок с 3D-наклоном */}
+        {/* Логотип + название в одной строке */}
         <motion.div
           style={{ rotateX, rotateY, transformPerspective: 800 }}
-          className="mb-8 cursor-default"
+          className="mb-8 cursor-default flex items-center justify-center gap-6 md:gap-8"
         >
-          {/* ПИОНЕР */}
-          <div className="flex justify-center gap-1 md:gap-2">
-            {letters1.map((l, i) => (
-              <motion.span
-                key={i}
-                className="inline-block text-6xl md:text-8xl lg:text-[9rem] font-black leading-none tracking-tight select-none"
-                style={{
-                  fontFamily: "'Cormorant Garamond', serif",
-                  textShadow: "2px 4px 0px rgba(0,0,0,0.4), 4px 8px 0px rgba(0,0,0,0.25), 6px 12px 20px rgba(0,0,0,0.3)",
-                  WebkitTextStroke: "1px rgba(255,255,255,0.15)",
-                }}
-                initial={{ opacity: 0, y: -60, rotateX: -90 }}
-                animate={{ opacity: 1, y: 0, rotateX: 0 }}
-                transition={{ duration: 0.7, delay: 0.3 + i * 0.07, ease: [0.23, 1, 0.32, 1] }}
-                whileHover={{ y: -8, scale: 1.08, color: "#f97316", transition: { duration: 0.2 } }}
-              >
-                {l}
-              </motion.span>
-            ))}
-          </div>
+          <motion.img
+            src="https://cdn.poehali.dev/projects/7dae44f0-6f80-4467-8e57-681afb14cfd8/bucket/logos/pioneer-trade-transparent.png"
+            alt="ГК Пионер Трейд"
+            className="h-24 md:h-36 lg:h-44 w-auto object-contain drop-shadow-2xl flex-shrink-0"
+            initial={{ opacity: 0, x: -40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          />
 
-          {/* ТРЕЙД — со смещением и другим цветом */}
-          <div className="flex justify-center gap-1 md:gap-2 -mt-2 md:-mt-4">
-            {letters2.map((l, i) => (
-              <motion.span
-                key={i}
-                className="inline-block text-6xl md:text-8xl lg:text-[9rem] font-black leading-none tracking-tight select-none"
-                style={{
-                  fontFamily: "'Cormorant Garamond', serif",
-                  textShadow: "2px 4px 0px rgba(249,115,22,0.5), 4px 8px 0px rgba(249,115,22,0.25), 6px 12px 20px rgba(0,0,0,0.4)",
-                  WebkitTextStroke: "1px rgba(249,115,22,0.3)",
-                  color: "#fff",
-                }}
-                initial={{ opacity: 0, y: 60, rotateX: 90 }}
-                animate={{ opacity: 1, y: 0, rotateX: 0 }}
-                transition={{ duration: 0.7, delay: 0.6 + i * 0.07, ease: [0.23, 1, 0.32, 1] }}
-                whileHover={{ y: -8, scale: 1.08, color: "#f97316", transition: { duration: 0.2 } }}
-              >
-                {l}
-              </motion.span>
-            ))}
+          <div className="flex flex-col items-start">
+            {/* ПИОНЕР */}
+            <div className="flex gap-0.5 md:gap-1">
+              {letters1.map((l, i) => (
+                <motion.span
+                  key={i}
+                  className="inline-block text-5xl md:text-7xl lg:text-[7rem] font-black leading-none tracking-tight select-none"
+                  style={{
+                    fontFamily: "'Cormorant Garamond', serif",
+                    textShadow: "2px 4px 0px rgba(0,0,0,0.4), 4px 8px 0px rgba(0,0,0,0.25), 6px 12px 20px rgba(0,0,0,0.3)",
+                    WebkitTextStroke: "1px rgba(255,255,255,0.15)",
+                  }}
+                  initial={{ opacity: 0, y: -60, rotateX: -90 }}
+                  animate={{ opacity: 1, y: 0, rotateX: 0 }}
+                  transition={{ duration: 0.7, delay: 0.3 + i * 0.07, ease: [0.23, 1, 0.32, 1] }}
+                  whileHover={{ y: -8, scale: 1.08, color: "#f97316", transition: { duration: 0.2 } }}
+                >
+                  {l}
+                </motion.span>
+              ))}
+            </div>
+            {/* ТРЕЙД */}
+            <div className="flex gap-0.5 md:gap-1 -mt-1 md:-mt-2">
+              {letters2.map((l, i) => (
+                <motion.span
+                  key={i}
+                  className="inline-block text-5xl md:text-7xl lg:text-[7rem] font-black leading-none tracking-tight select-none"
+                  style={{
+                    fontFamily: "'Cormorant Garamond', serif",
+                    textShadow: "2px 4px 0px rgba(249,115,22,0.5), 4px 8px 0px rgba(249,115,22,0.25), 6px 12px 20px rgba(0,0,0,0.4)",
+                    WebkitTextStroke: "1px rgba(249,115,22,0.3)",
+                    color: "#fff",
+                  }}
+                  initial={{ opacity: 0, y: 60, rotateX: 90 }}
+                  animate={{ opacity: 1, y: 0, rotateX: 0 }}
+                  transition={{ duration: 0.7, delay: 0.6 + i * 0.07, ease: [0.23, 1, 0.32, 1] }}
+                  whileHover={{ y: -8, scale: 1.08, color: "#f97316", transition: { duration: 0.2 } }}
+                >
+                  {l}
+                </motion.span>
+              ))}
+            </div>
           </div>
         </motion.div>
 
