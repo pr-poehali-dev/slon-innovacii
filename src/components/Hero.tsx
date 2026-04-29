@@ -28,13 +28,13 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black/40 z-[1]" />
       <div className="relative z-10 text-center text-white px-6">
         <p className="uppercase tracking-[0.3em] text-sm md:text-base mb-4 opacity-80">
-          ООО Пионер Трейд
+          Группа компаний · основана в 2007 году
         </p>
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6 leading-tight">
-          ИМПОРТНОЕ<br />СЫРЬЁ
+          ПИОНЕР<br />ТРЕЙД
         </h1>
         <p className="text-lg md:text-xl max-w-2xl mx-auto opacity-90 mb-10">
-          Крупнейший поставщик импортного сырья в России. Надёжные поставки, проверенные партнёры, полный цикл сопровождения.
+          Один из крупнейших поставщиков продукции промышленной химии в России. Более 18 лет — надёжный партнёр для клиентов и поставщиков.
         </p>
         <a
           href="#contact"
