@@ -88,6 +88,7 @@ export default function Hero() {
                 key={i}
                 className="inline-block text-6xl md:text-8xl lg:text-[9rem] font-black leading-none tracking-tight select-none"
                 style={{
+                  fontFamily: "'Cormorant Garamond', serif",
                   textShadow: "2px 4px 0px rgba(0,0,0,0.4), 4px 8px 0px rgba(0,0,0,0.25), 6px 12px 20px rgba(0,0,0,0.3)",
                   WebkitTextStroke: "1px rgba(255,255,255,0.15)",
                 }}
@@ -108,6 +109,7 @@ export default function Hero() {
                 key={i}
                 className="inline-block text-6xl md:text-8xl lg:text-[9rem] font-black leading-none tracking-tight select-none"
                 style={{
+                  fontFamily: "'Cormorant Garamond', serif",
                   textShadow: "2px 4px 0px rgba(249,115,22,0.5), 4px 8px 0px rgba(249,115,22,0.25), 6px 12px 20px rgba(0,0,0,0.4)",
                   WebkitTextStroke: "1px rgba(249,115,22,0.3)",
                   color: "#fff",
