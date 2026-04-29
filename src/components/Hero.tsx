@@ -47,13 +47,13 @@ export default function Hero() {
           className="w-full h-full object-cover"
         />
       </motion.div>
-      {/* Естественное небо */}
+      {/* Дневное небо */}
       <div className="absolute inset-0 z-[1]" style={{
-        background: "linear-gradient(to bottom, rgba(30,80,140,0.45) 0%, rgba(100,140,180,0.25) 30%, rgba(210,160,90,0.2) 55%, rgba(10,10,20,0.65) 100%)"
+        background: "linear-gradient(to bottom, rgba(30,100,200,0.55) 0%, rgba(80,160,230,0.35) 35%, rgba(180,220,255,0.15) 60%, rgba(5,10,20,0.6) 100%)"
       }} />
-      {/* Солнечный блик на горизонте */}
+      {/* Солнечный блик */}
       <div className="absolute inset-0 z-[1]" style={{
-        background: "radial-gradient(ellipse 80% 30% at 60% 52%, rgba(255,180,80,0.18) 0%, transparent 70%)"
+        background: "radial-gradient(ellipse 60% 25% at 70% 30%, rgba(255,255,220,0.22) 0%, transparent 70%)"
       }} />
 
       {/* Контент */}
