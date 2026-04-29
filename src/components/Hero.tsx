@@ -29,7 +29,7 @@ export default function Hero() {
       {/* Фон с параллаксом */}
       <motion.div style={{ y }} className="absolute inset-0 w-full h-full">
         <img
-          src="https://cdn.poehali.dev/projects/7dae44f0-6f80-4467-8e57-681afb14cfd8/files/6bffbf22-3e12-409c-a4dd-8e3bf89a16b4.jpg"
+          src="https://cdn.poehali.dev/projects/7dae44f0-6f80-4467-8e57-681afb14cfd8/files/161fcb30-b862-4235-a99e-02242f4488e5.jpg"
           alt="Промышленный порт с грузами"
           className="w-full h-full object-cover"
         />
