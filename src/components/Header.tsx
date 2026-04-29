@@ -11,6 +11,7 @@ export default function Header({ className }: HeaderProps) {
             src="https://cdn.poehali.dev/projects/7dae44f0-6f80-4467-8e57-681afb14cfd8/bucket/64ec4992-014a-4643-9796-69df6bf5ebab.png"
             alt="Пионер Трейд логотип"
             className="h-8 w-auto object-contain"
+            style={{ mixBlendMode: "screen" }}
           />
           <span className="text-white text-sm uppercase tracking-wide font-bold">Пионер Трейд</span>
         </div>

@@ -56,7 +56,8 @@ export default function Footer() {
                 <img
                   src="https://cdn.poehali.dev/projects/7dae44f0-6f80-4467-8e57-681afb14cfd8/bucket/64ec4992-014a-4643-9796-69df6bf5ebab.png"
                   alt="Пионер Трейд логотип"
-                  className="h-14 sm:h-16 w-auto object-contain mb-2 opacity-90"
+                  className="h-14 sm:h-16 w-auto object-contain mb-2"
+                  style={{ mixBlendMode: "screen" }}
                 />
                 <h1 className="text-[12vw] sm:text-[11vw] lg:text-[9vw] leading-[0.8] text-white font-bold tracking-tight">
                   ПИОНЕР<br />ТРЕЙД
