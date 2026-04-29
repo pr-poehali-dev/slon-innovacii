@@ -5,6 +5,7 @@ import Logistics from "@/components/Logistics";
 import Geography from "@/components/Geography";
 import Delivery from "@/components/Delivery";
 import Exhibitions from "@/components/Exhibitions";
+import Journey from "@/components/Journey";
 import Catalog from "@/components/Catalog";
 import Clients from "@/components/Clients";
 import Promo from "@/components/Promo";
@@ -20,6 +21,7 @@ const Index = () => {
       <Geography />
       <Delivery />
       <Exhibitions />
+      <Journey />
       <Catalog />
       <Clients />
       <Promo />
