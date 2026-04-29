@@ -52,9 +52,16 @@ export default function Footer() {
               </div>
             </div>
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 sm:gap-0">
-              <h1 className="text-[12vw] sm:text-[11vw] lg:text-[9vw] leading-[0.8] mt-4 sm:mt-6 lg:mt-10 text-white font-bold tracking-tight">
-                ПИОНЕР<br />ТРЕЙД
-              </h1>
+              <div className="flex items-end gap-6 mt-4 sm:mt-6 lg:mt-10">
+                <img
+                  src="https://cdn.poehali.dev/projects/7dae44f0-6f80-4467-8e57-681afb14cfd8/files/916c9155-3537-452a-a497-c09c704f2cd2.jpg"
+                  alt="Пионер Трейд логотип"
+                  className="w-16 h-16 sm:w-20 sm:h-20 object-cover rounded-sm mb-2 opacity-90"
+                />
+                <h1 className="text-[12vw] sm:text-[11vw] lg:text-[9vw] leading-[0.8] text-white font-bold tracking-tight">
+                  ПИОНЕР<br />ТРЕЙД
+                </h1>
+              </div>
               <p className="text-white text-sm sm:text-base">{new Date().getFullYear()} ООО Пионер Трейд</p>
             </div>
           </div>
