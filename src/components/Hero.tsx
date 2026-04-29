@@ -27,6 +27,13 @@ export default function Hero() {
 
       <div className="absolute inset-0 bg-black/40 z-[1]" />
       <div className="relative z-10 text-center text-white px-6">
+        <div className="flex justify-center mb-6">
+          <img
+            src="https://cdn.poehali.dev/projects/7dae44f0-6f80-4467-8e57-681afb14cfd8/files/916c9155-3537-452a-a497-c09c704f2cd2.jpg"
+            alt="ГК Пионер Трейд"
+            className="w-20 h-20 md:w-28 md:h-28 object-cover rounded-sm opacity-95"
+          />
+        </div>
         <p className="uppercase tracking-[0.3em] text-sm md:text-base mb-4 opacity-80">
           Группа компаний · основана в 2007 году
         </p>
