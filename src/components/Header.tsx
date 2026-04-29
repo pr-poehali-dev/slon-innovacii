@@ -12,7 +12,7 @@ export default function Header({ className }: HeaderProps) {
             alt="Пионер Трейд логотип"
             className="h-8 w-auto object-contain"
           />
-          <span className="text-white text-sm uppercase tracking-wide font-bold">Пионер Трейд</span>
+
         </div>
         <nav className="flex gap-8">
           <a
