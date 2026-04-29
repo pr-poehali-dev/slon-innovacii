@@ -1,5 +1,6 @@
 import { useScroll, useTransform, motion, useMotionValue, useSpring } from "framer-motion";
 import { useRef, useEffect } from "react";
+import LogoImage from "@/components/ui/LogoImage";
 
 export default function Hero() {
   const container = useRef<HTMLDivElement>(null);
@@ -60,11 +61,10 @@ export default function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <img
+          <LogoImage
             src="https://cdn.poehali.dev/projects/7dae44f0-6f80-4467-8e57-681afb14cfd8/bucket/64ec4992-014a-4643-9796-69df6bf5ebab.png"
             alt="ГК Пионер Трейд"
             className="h-20 md:h-28 w-auto object-contain drop-shadow-2xl"
-            style={{ mixBlendMode: "screen" }}
           />
         </motion.div>
 
