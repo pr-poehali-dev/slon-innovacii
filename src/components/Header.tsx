@@ -10,7 +10,7 @@ export default function Header({ className }: HeaderProps) {
           <img
             src="https://cdn.poehali.dev/projects/7dae44f0-6f80-4467-8e57-681afb14cfd8/bucket/logos/pioneer-trade-transparent.png"
             alt="Пионер Трейд логотип"
-            className="h-8 w-auto object-contain"
+            className="h-16 w-auto object-contain"
           />
         </div>
         <nav className="flex gap-8">
