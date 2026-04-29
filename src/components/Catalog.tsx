@@ -6,7 +6,10 @@ const categories = [
     id: "petrochemistry",
     name: "Нефтехимия",
     icon: "🛢️",
-    color: "from-amber-600 to-amber-800",
+    bg: "bg-amber-500",
+    text: "text-amber-400",
+    border: "border-amber-500",
+    gradient: "from-amber-500/20 to-amber-900/40",
     products: [
       "Этилен (C₂H₄)", "Пропилен (C₃H₆)", "Бензол (C₆H₆)", "Толуол (C₇H₈)",
       "Ксилол (орто, мета, пара)", "Стирол", "Нафталин", "Антрацен",
@@ -15,22 +18,28 @@ const categories = [
   },
   {
     id: "polymers",
-    name: "Полимеры и пластмассы",
+    name: "Полимеры",
     icon: "🧱",
-    color: "from-blue-600 to-blue-800",
+    bg: "bg-blue-500",
+    text: "text-blue-400",
+    border: "border-blue-500",
+    gradient: "from-blue-500/20 to-blue-900/40",
     products: [
       "Полиэтилен высокого давления (ПЭВД)", "Полиэтилен низкого давления (ПЭНД)",
       "Полипропилен (ПП)", "Поливинилхлорид (ПВХ)", "Полистирол (ПС)",
       "ПЭТФ (полиэтилентерефталат)", "Полиуретан (ПУ)", "Полиамид (нейлон)",
       "Поликарбонат", "АБС-пластик", "Поливинилацетат (ПВА)", "Эпоксидные смолы",
-      "Полиакрилаты", "Фторопласт (ПТФЭ)", "Каучук синтетический (СКС, СКД, СКЭП)",
+      "Полиакрилаты", "Фторопласт (ПТФЭ)", "Каучук синтетический",
     ],
   },
   {
     id: "solvents",
     name: "Растворители",
     icon: "🧪",
-    color: "from-cyan-600 to-cyan-800",
+    bg: "bg-cyan-500",
+    text: "text-cyan-400",
+    border: "border-cyan-500",
+    gradient: "from-cyan-500/20 to-cyan-900/40",
     products: [
       "Ацетон", "Этанол технический", "Изопропиловый спирт (ИПС)",
       "Метанол", "Этилацетат", "Бутилацетат", "Н-бутанол", "Изобутанол",
@@ -43,7 +52,10 @@ const categories = [
     id: "acids",
     name: "Кислоты",
     icon: "⚗️",
-    color: "from-red-600 to-red-800",
+    bg: "bg-red-500",
+    text: "text-red-400",
+    border: "border-red-500",
+    gradient: "from-red-500/20 to-red-900/40",
     products: [
       "Серная кислота (H₂SO₄)", "Соляная кислота (HCl)", "Азотная кислота (HNO₃)",
       "Фосфорная кислота (H₃PO₄)", "Уксусная кислота ледяная",
@@ -54,9 +66,12 @@ const categories = [
   },
   {
     id: "alkalis",
-    name: "Щёлочи и основания",
+    name: "Щёлочи",
     icon: "🔬",
-    color: "from-violet-600 to-violet-800",
+    bg: "bg-violet-500",
+    text: "text-violet-400",
+    border: "border-violet-500",
+    gradient: "from-violet-500/20 to-violet-900/40",
     products: [
       "Гидроксид натрия (NaOH, каустик)", "Гидроксид калия (KOH)",
       "Гидроксид кальция (Ca(OH)₂)", "Аммиак технический (NH₃)",
@@ -69,7 +84,10 @@ const categories = [
     id: "fertilizers",
     name: "Удобрения",
     icon: "🌱",
-    color: "from-emerald-600 to-emerald-800",
+    bg: "bg-emerald-500",
+    text: "text-emerald-400",
+    border: "border-emerald-500",
+    gradient: "from-emerald-500/20 to-emerald-900/40",
     products: [
       "Мочевина (карбамид)", "Аммиачная селитра", "Сульфат аммония",
       "Хлорид калия", "Сульфат калия", "Калийная селитра",
@@ -80,89 +98,105 @@ const categories = [
   },
   {
     id: "pigments",
-    name: "Пигменты и красители",
+    name: "Пигменты",
     icon: "🎨",
-    color: "from-pink-600 to-pink-800",
+    bg: "bg-pink-500",
+    text: "text-pink-400",
+    border: "border-pink-500",
+    gradient: "from-pink-500/20 to-pink-900/40",
     products: [
       "Диоксид титана (TiO₂)", "Оксид железа красный (Fe₂O₃)",
       "Оксид железа жёлтый", "Оксид железа чёрный (Fe₃O₄)",
       "Ультрамарин синий", "Берлинская лазурь", "Технический углерод (сажа)",
       "Литопон", "Цинковые белила (ZnO)", "Хромоксид зелёный",
-      "Свинцовый крон жёлтый", "Фталоцианиновый синий", "Фталоцианиновый зелёный",
-      "Азопигменты", "Перламутровые пигменты (слюда)", "Люминесцентные пигменты",
+      "Фталоцианиновый синий", "Фталоцианиновый зелёный",
+      "Азопигменты", "Перламутровые пигменты", "Люминесцентные пигменты",
     ],
   },
   {
     id: "surfactants",
-    name: "ПАВ и эмульгаторы",
+    name: "ПАВ",
     icon: "🫧",
-    color: "from-sky-500 to-sky-700",
+    bg: "bg-sky-500",
+    text: "text-sky-400",
+    border: "border-sky-500",
+    gradient: "from-sky-500/20 to-sky-900/40",
     products: [
       "Лаурилсульфат натрия (SLS)", "Лаурилэфирсульфат натрия (SLES)",
       "Алкилбензолсульфонат (АБС)", "Нефтяной сульфонат",
-      "АПАВ анионный (для стирки)", "Катионные ПАВ (КПАВ)",
+      "АПАВ анионный", "Катионные ПАВ (КПАВ)",
       "Неионогенные ПАВ (НПАВ)", "Оксиэтилированные спирты",
       "Оксиэтилированные алкилфенолы", "Бетаины амфотерные",
       "Лецитин соевый", "Полисорбаты (Твин)", "Сорбитаны (Спан)",
-      "Амфолитные ПАВ",
     ],
   },
   {
     id: "salts",
-    name: "Неорганические соли",
+    name: "Неорг. соли",
     icon: "🧂",
-    color: "from-orange-500 to-orange-700",
+    bg: "bg-orange-500",
+    text: "text-orange-400",
+    border: "border-orange-500",
+    gradient: "from-orange-500/20 to-orange-900/40",
     products: [
       "Хлорид натрия (соль техническая)", "Сульфат натрия (Na₂SO₄)",
       "Нитрат натрия", "Нитрат кальция", "Хлорид кальция (CaCl₂)",
       "Сульфат магния (MgSO₄)", "Хлорид аммония (NH₄Cl)",
-      "Сульфат алюминия", "Хлорид железа (FeCl₃)", "Сульфат меди (медный купорос)",
-      "Сульфат цинка (ZnSO₄)", "Нитрат цинка", "Хлорид марганца",
-      "Бихромат калия", "Перманганат калия", "Гипохлорит натрия",
+      "Сульфат алюминия", "Хлорид железа (FeCl₃)", "Медный купорос",
+      "Сульфат цинка (ZnSO₄)", "Нитрат цинка", "Перманганат калия",
+      "Гипохлорит натрия", "Бихромат калия",
     ],
   },
   {
     id: "catalysts",
-    name: "Катализаторы и адсорбенты",
+    name: "Катализаторы",
     icon: "⚡",
-    color: "from-yellow-500 to-yellow-700",
+    bg: "bg-yellow-500",
+    text: "text-yellow-400",
+    border: "border-yellow-500",
+    gradient: "from-yellow-500/20 to-yellow-900/40",
     products: [
       "Активированный уголь", "Силикагель", "Цеолиты",
       "Оксид алюминия (γ-Al₂O₃)", "Диоксид кремния (аэросил)",
       "Никелевый катализатор", "Платиновый катализатор",
       "Палладиевый катализатор", "Оксид ванадия (V₂O₅)",
       "Оксид марганца", "Молибденовый катализатор",
-      "Катализатор Циглера-Натта", "Цеолитные катализаторы",
+      "Катализатор Циглера-Натта",
     ],
   },
   {
     id: "special",
-    name: "Спецхимия и добавки",
+    name: "Спецхимия",
     icon: "🔧",
-    color: "from-rose-600 to-rose-800",
+    bg: "bg-rose-500",
+    text: "text-rose-400",
+    border: "border-rose-500",
+    gradient: "from-rose-500/20 to-rose-900/40",
     products: [
-      "Антиоксиданты для полимеров", "Стабилизаторы ПВХ (Pb, Ca/Zn, Ba/Zn)",
-      "Пластификаторы (ДОФ, ДОА, ДБФ)", "Антипирены (ТХЭФ, пентабромдифенол)",
+      "Антиоксиданты для полимеров", "Стабилизаторы ПВХ",
+      "Пластификаторы (ДОФ, ДОА, ДБФ)", "Антипирены",
       "Нуклеаторы и зародышеобразователи", "Антистатики",
       "Пигментные концентраты (мастербатчи)", "Вспенивающие агенты",
       "Сшивающие агенты", "Ускорители вулканизации",
-      "Смазки технологические", "Разделительные агенты",
-      "Флуоресцентные отбеливатели", "Фотоинициаторы для УФ-отверждения",
+      "Смазки технологические", "Фотоинициаторы УФ-отверждения",
     ],
   },
   {
     id: "rubber",
-    name: "Резинотехническая химия",
+    name: "Резинохимия",
     icon: "⭕",
-    color: "from-neutral-600 to-neutral-800",
+    bg: "bg-neutral-500",
+    text: "text-neutral-400",
+    border: "border-neutral-500",
+    gradient: "from-neutral-500/20 to-neutral-900/40",
     products: [
-      "Сера техническая (вулканизация)", "Каолин (белая сажа)",
+      "Сера техническая", "Каолин (белая сажа)",
       "Диоксид кремния (наполнитель)", "Нафтенат цинка",
       "Стеариновая кислота", "Оксид цинка (активатор)",
       "Дифенилгуанидин (ДФГ)", "Меркаптобензтиазол (МБТ)",
-      "Тетраметилтиурамдисульфид (ТМТД)", "Технический углерод (N220, N330, N550)",
+      "Тетраметилтиурамдисульфид (ТМТД)", "Технический углерод (N220, N330)",
       "Мел технический", "Тальк технический",
-      "Антиозонанты (ПАФ-Д, Диафен)", "Ингибиторы скорчинга",
+      "Антиозонанты", "Ингибиторы скорчинга",
     ],
   },
 ];
@@ -177,35 +211,41 @@ export default function Catalog() {
     ? categories.flatMap((c) =>
         c.products
           .filter((p) => p.toLowerCase().includes(search.toLowerCase()))
-          .map((p) => ({ product: p, category: c.name, icon: c.icon }))
+          .map((p) => ({ product: p, category: c.name, icon: c.icon, text: c.text, bg: c.bg }))
       )
     : null;
 
+  const totalProducts = categories.reduce((a, c) => a + c.products.length, 0);
+
   return (
-    <div className="bg-white py-20 px-6" id="catalog">
+    <div className="bg-neutral-950 py-20 px-6" id="catalog">
       <div className="max-w-6xl mx-auto">
 
         {/* Заголовок */}
         <div className="mb-12 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <div>
-            <p className="uppercase text-sm tracking-widest text-orange-500 mb-3">Ассортимент</p>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 leading-tight">
+            <p className="uppercase text-sm tracking-widest text-orange-400 mb-3">Ассортимент</p>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
               Каталог<br />продукции
             </h2>
+            <p className="text-neutral-500 mt-3 text-sm">
+              {categories.length} категорий · {totalProducts}+ позиций
+            </p>
           </div>
           {/* Поиск */}
-          <div className="relative md:w-72">
+          <div className="relative md:w-80">
+            <span className="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-500 text-sm">🔍</span>
             <input
               type="text"
               placeholder="Найти продукт..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-full border border-neutral-300 px-4 py-3 text-sm focus:outline-none focus:border-orange-500 transition-colors pr-10"
+              className="w-full bg-neutral-900 border border-neutral-700 focus:border-orange-500 px-4 py-3 pl-10 text-sm text-white placeholder-neutral-500 focus:outline-none transition-colors"
             />
             {search && (
               <button
                 onClick={() => setSearch("")}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-neutral-400 hover:text-neutral-700 text-lg leading-none"
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-neutral-500 hover:text-white text-xl leading-none"
               >×</button>
             )}
           </div>
@@ -214,7 +254,9 @@ export default function Catalog() {
         {/* Режим поиска */}
         {filtered ? (
           <div>
-            <p className="text-neutral-500 text-sm mb-6">Найдено позиций: <span className="font-semibold text-neutral-900">{filtered.length}</span></p>
+            <p className="text-neutral-500 text-sm mb-6">
+              Найдено: <span className="font-semibold text-white">{filtered.length}</span> позиций
+            </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {filtered.map((item, i) => (
                 <motion.div
@@ -222,42 +264,48 @@ export default function Catalog() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.03 }}
-                  className="border border-neutral-200 px-4 py-3 flex items-start gap-3 hover:border-orange-300 transition-colors"
+                  className="bg-neutral-900 border border-neutral-800 px-4 py-3 flex items-start gap-3 hover:border-orange-500/50 transition-colors"
                 >
                   <span className="text-xl shrink-0">{item.icon}</span>
                   <div>
-                    <p className="text-neutral-900 text-sm font-medium">{item.product}</p>
-                    <p className="text-neutral-400 text-xs mt-0.5">{item.category}</p>
+                    <p className="text-white text-sm font-medium">{item.product}</p>
+                    <p className={`text-xs mt-0.5 ${item.text}`}>{item.category}</p>
                   </div>
                 </motion.div>
               ))}
             </div>
             {filtered.length === 0 && (
-              <p className="text-neutral-400 text-center py-16">Ничего не найдено. Попробуйте другой запрос.</p>
+              <p className="text-neutral-500 text-center py-16 text-lg">Ничего не найдено</p>
             )}
           </div>
         ) : (
           <div className="flex flex-col lg:flex-row gap-6">
 
-            {/* Категории */}
-            <div className="lg:w-64 shrink-0 flex flex-row lg:flex-col gap-2 overflow-x-auto lg:overflow-x-visible pb-2 lg:pb-0">
-              {categories.map((cat) => (
-                <button
-                  key={cat.id}
-                  onClick={() => setActive(cat.id)}
-                  className={`flex items-center gap-3 px-4 py-3 text-left text-sm font-medium transition-all duration-200 whitespace-nowrap shrink-0 lg:shrink lg:whitespace-normal
-                    ${active === cat.id
-                      ? "bg-neutral-900 text-white"
-                      : "bg-neutral-100 text-neutral-700 hover:bg-neutral-200"
-                    }`}
-                >
-                  <span className="text-base">{cat.icon}</span>
-                  <span>{cat.name}</span>
-                  {active === cat.id && (
-                    <span className="ml-auto text-xs text-neutral-400 hidden lg:block">{cat.products.length}</span>
-                  )}
-                </button>
-              ))}
+            {/* Категории — плитки */}
+            <div className="lg:w-72 shrink-0">
+              <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-2 gap-2">
+                {categories.map((cat) => (
+                  <button
+                    key={cat.id}
+                    onClick={() => setActive(cat.id)}
+                    className={`relative flex flex-col items-start gap-2 p-4 text-left transition-all duration-200 border overflow-hidden
+                      ${active === cat.id
+                        ? `bg-neutral-800 ${cat.border} ${cat.text}`
+                        : "bg-neutral-900 border-neutral-800 text-neutral-400 hover:bg-neutral-800 hover:text-white"
+                      }`}
+                  >
+                    {active === cat.id && (
+                      <motion.div
+                        layoutId="activeBg"
+                        className={`absolute inset-0 bg-gradient-to-br ${cat.gradient} pointer-events-none`}
+                      />
+                    )}
+                    <span className="text-2xl relative z-10">{cat.icon}</span>
+                    <span className="text-xs font-semibold uppercase tracking-wide leading-tight relative z-10">{cat.name}</span>
+                    <span className="text-[10px] text-neutral-500 relative z-10">{cat.products.length} поз.</span>
+                  </button>
+                ))}
+              </div>
             </div>
 
             {/* Продукты */}
@@ -265,37 +313,39 @@ export default function Catalog() {
               <AnimatePresence mode="wait">
                 <motion.div
                   key={active}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
-                  transition={{ duration: 0.25 }}
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -16 }}
+                  transition={{ duration: 0.22 }}
                 >
-                  {/* Шапка категории */}
-                  <div className={`bg-gradient-to-r ${current.color} p-6 mb-4 flex items-center justify-between`}>
-                    <div className="flex items-center gap-4">
-                      <span className="text-4xl">{current.icon}</span>
-                      <div>
-                        <h3 className="text-white text-xl font-bold">{current.name}</h3>
-                        <p className="text-white/70 text-sm">{current.products.length} позиций</p>
+                  {/* Шапка */}
+                  <div className={`relative overflow-hidden p-6 mb-4 bg-gradient-to-r ${current.gradient} border ${current.border}`}>
+                    <div className="flex items-center justify-between gap-4">
+                      <div className="flex items-center gap-4">
+                        <span className="text-5xl">{current.icon}</span>
+                        <div>
+                          <h3 className="text-white text-2xl font-bold">{current.name}</h3>
+                          <p className={`text-sm mt-0.5 ${current.text}`}>{current.products.length} позиций в каталоге</p>
+                        </div>
                       </div>
+                      <button className={`shrink-0 border ${current.border} ${current.text} text-xs uppercase tracking-widest px-5 py-2.5 hover:bg-white/10 transition-colors hidden sm:block`}>
+                        Запросить прайс
+                      </button>
                     </div>
-                    <button className="bg-white/20 hover:bg-white/30 text-white text-xs uppercase tracking-widest px-4 py-2 transition-colors">
-                      Запросить прайс
-                    </button>
                   </div>
 
-                  {/* Список */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-neutral-200">
+                  {/* Список продуктов */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     {current.products.map((product, i) => (
                       <motion.div
                         key={product}
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: i * 0.04 }}
-                        className="bg-white px-5 py-4 flex items-center gap-3 hover:bg-neutral-50 transition-colors group"
+                        initial={{ opacity: 0, x: -10 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: i * 0.03 }}
+                        className="group flex items-center gap-3 bg-neutral-900 hover:bg-neutral-800 border border-neutral-800 hover:border-neutral-700 px-4 py-3.5 transition-all duration-200 cursor-default"
                       >
-                        <span className="w-1.5 h-1.5 rounded-full bg-orange-500 shrink-0 group-hover:scale-150 transition-transform" />
-                        <span className="text-neutral-800 text-sm">{product}</span>
+                        <span className={`w-1.5 h-1.5 rounded-full ${current.bg} shrink-0 group-hover:scale-150 transition-transform duration-200`} />
+                        <span className="text-neutral-300 group-hover:text-white text-sm transition-colors">{product}</span>
                       </motion.div>
                     ))}
                   </div>
@@ -306,13 +356,13 @@ export default function Catalog() {
         )}
 
         {/* CTA */}
-        <div className="mt-12 bg-neutral-950 p-8 md:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-          <div>
-            <p className="text-white font-bold text-xl">Не нашли нужную позицию?</p>
-            <p className="text-neutral-400 text-sm mt-1">Мы поставляем широкий ассортимент — свяжитесь с нами для уточнения наличия и цены</p>
+        <div className="mt-10 flex flex-col sm:flex-row items-stretch gap-px">
+          <div className="flex-1 bg-neutral-900 border border-neutral-800 p-6">
+            <p className="text-white font-bold text-lg">Не нашли нужную позицию?</p>
+            <p className="text-neutral-500 text-sm mt-1">Поставляем широкий ассортимент — уточним наличие и цену</p>
           </div>
-          <button className="bg-orange-500 hover:bg-orange-400 text-white px-8 py-3 text-sm uppercase tracking-widest font-bold transition-colors whitespace-nowrap shrink-0">
-            Запросить прайс
+          <button className="bg-orange-500 hover:bg-orange-400 text-white px-10 py-6 text-sm uppercase tracking-widest font-bold transition-colors whitespace-nowrap">
+            Запросить прайс →
           </button>
         </div>
 
