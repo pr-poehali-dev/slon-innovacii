@@ -1,5 +1,5 @@
-import { useScroll, useTransform, motion } from "framer-motion";
-import { useRef } from "react";
+import { useScroll, useTransform, motion, useMotionValue, useSpring } from "framer-motion";
+import { useRef, useEffect } from "react";
 
 
 export default function Hero() {
@@ -13,6 +13,22 @@ export default function Hero() {
   const titleY = useTransform(scrollYProgress, [0, 1], ["0px", "120px"]);
   const titleScale = useTransform(scrollYProgress, [0, 0.5], [1, 0.85]);
   const titleOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
+
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+  const rotateX = useSpring(useTransform(mouseY, [-300, 300], [18, -18]), { stiffness: 80, damping: 18 });
+  const rotateY = useSpring(useTransform(mouseX, [-600, 600], [-18, 18]), { stiffness: 80, damping: 18 });
+  const lightX = useSpring(useTransform(mouseX, [-600, 600], [0, 100]), { stiffness: 80, damping: 18 });
+  const lightY = useSpring(useTransform(mouseY, [-300, 300], [0, 100]), { stiffness: 80, damping: 18 });
+
+  useEffect(() => {
+    const handleMouse = (e: MouseEvent) => {
+      mouseX.set(e.clientX - window.innerWidth / 2);
+      mouseY.set(e.clientY - window.innerHeight / 2);
+    };
+    window.addEventListener("mousemove", handleMouse);
+    return () => window.removeEventListener("mousemove", handleMouse);
+  }, [mouseX, mouseY]);
 
 
 
@@ -47,18 +63,53 @@ export default function Hero() {
           Группа компаний · основана в 2007 году
         </motion.p>
 
-        {/* Логотип */}
+        {/* Логотип 3D */}
         <motion.div
           className="mb-8 flex justify-center"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          style={{ perspective: 900 }}
+          initial={{ opacity: 0, scale: 0.7, y: 40 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 1, ease: [0.23, 1, 0.32, 1] }}
         >
-          <img
-            src="https://cdn.poehali.dev/projects/7dae44f0-6f80-4467-8e57-681afb14cfd8/bucket/logos/pioneer-trade-transparent.png"
-            alt="ГК Пионер Трейд"
-            className="h-36 md:h-52 lg:h-64 w-auto object-contain drop-shadow-2xl"
-          />
+          <motion.div
+            style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
+            animate={{ y: [0, -12, 0] }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            className="relative"
+          >
+            {/* Тень под логотипом */}
+            <motion.div
+              style={{ rotateX, rotateY }}
+              className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-4/5 h-8 rounded-full"
+              animate={{ scaleX: [1, 0.85, 1], opacity: [0.5, 0.3, 0.5] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              style={{
+                background: "radial-gradient(ellipse, rgba(0,0,0,0.6) 0%, transparent 70%)",
+                filter: "blur(10px)",
+              }}
+            />
+
+            {/* Световой блик */}
+            <motion.div
+              className="absolute inset-0 rounded-xl pointer-events-none z-10"
+              style={{
+                background: useTransform(
+                  [lightX, lightY],
+                  ([lx, ly]) =>
+                    `radial-gradient(circle at ${lx}% ${ly}%, rgba(255,255,255,0.25) 0%, transparent 60%)`
+                ),
+              }}
+            />
+
+            <img
+              src="https://cdn.poehali.dev/projects/7dae44f0-6f80-4467-8e57-681afb14cfd8/bucket/logos/pioneer-trade-transparent.png"
+              alt="ГК Пионер Трейд"
+              className="h-36 md:h-56 lg:h-72 w-auto object-contain relative z-[1]"
+              style={{
+                filter: "drop-shadow(0 20px 40px rgba(0,0,0,0.6)) drop-shadow(0 0 80px rgba(249,115,22,0.2))",
+              }}
+            />
+          </motion.div>
         </motion.div>
 
         <motion.p
